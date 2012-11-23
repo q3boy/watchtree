@@ -1,4 +1,6 @@
 # Watch tree
+![travis build info](https://api.travis-ci.org/q3boy/watchtree.png)
+
 a library for watching FS trees
 
 ## new WatchTree(dir1 [, dir2...] [,options])
