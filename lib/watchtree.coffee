@@ -1,6 +1,7 @@
 #print
 events = require "events"
 fs = require "fs"
+Path = require "path"
 os = require 'options-stream'
 
 class WatchTree extends events.EventEmitter
@@ -49,7 +50,7 @@ class WatchTree extends events.EventEmitter
   onEvent : (events, file) ->
     return if @stopped
     evt = null
-    fs.exists file, (exists) =>
+    Path.exists file, (exists) =>
       if not exists
         @files[file].close() if @files[file]
         delete @files[file]
